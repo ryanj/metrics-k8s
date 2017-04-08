@@ -37,4 +37,4 @@ To make the container image available at [`localhost:8088`](http://localhost:808
 docker run -p 8088:8080 -it quay.io/ryanj/metrics-k8s
 ```
 
-#### License: MIT
+## License: MIT
