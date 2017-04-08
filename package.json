@@ -1,6 +1,6 @@
 {
-  "name": "metrics-base",
-  "description": "A basic patternfly http server example, inspired by Raynos/http-framework",
+  "name": "metrics-k8s",
+  "description": "A k8s metrics dashboard, based on patternfly",
   "version": "0.1.0",
   "private": false,
   "engines": {
@@ -18,11 +18,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryanj/k8s-metrics-dash.git"
+    "url": "https://github.com/ryanj/metrics-k8s.git"
   },
   "scripts": {
     "start": "node server.js"
   },
-  "license": "CC0",
+  "license": "MIT",
   "main": "server.js"
 }
