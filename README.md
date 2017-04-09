@@ -1,7 +1,8 @@
 # metrics-k8s
 *A basic metrics project built with patternfly*
 
-[![Dependency Check](http://img.shields.io/david/ryanj/http-base.svg)](https://david-dm.org/ryanj/http-base)
+[![npm dependency statuses](http://img.shields.io/david/ryanj/http-base.svg "npm dependencies, via david-dm")](https://david-dm.org/ryanj/http-base)
+[![Available on Quay](https://quay.io/repository/ryanj/metrics-k8s/status "container image available on Quay")](https://quay.io/repository/ryanj/metrics-k8s)
 
 ## Local Development
 For local development environment, clone the repo and run:
