@@ -24,7 +24,7 @@ To create a kubernetes `deployment` and a "NodePort" `service`, both named `metr
 
 ```bash
 kubectl run metrics-k8s --image=quay.io/ryanj/metrics-k8s \
---expose --port=8080 --service-overrides='{ "spec": { "type": "NodePort" } }'
+--expose --port=2015 --service-overrides='{ "spec": { "type": "NodePort" } }'
 ```
 
 Minikube users will be able to open the resulting service in their browser by running:
@@ -37,7 +37,7 @@ Container images are automatically built on [quay.io](http://quay.io/ryanj/metri
 
 To make the container image available at [`localhost:8088`](http://localhost:8088/), run:
 ```bash
-docker run -p 8088:8080 -it quay.io/ryanj/metrics-k8s
+docker run -p 8088:2015 -it quay.io/ryanj/metrics-k8s
 ```
 
 ## License: MIT
