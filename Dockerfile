@@ -1,2 +1,3 @@
-FROM ryanj/centos7-nodejs:current
+FROM joshix/caddy
 MAINTAINER ryanj <ryanj@coreos.com>
+COPY . /var/www/html
