@@ -115,35 +115,26 @@
 -->
 
 <div class="col-sm-12 col-md-6 cols-nopad-right">
-  <h1>Median PR latency (in days)</h1>
+  <h1>Median PR Latency</h1>
 </div>
 <div class="container-fluid container-cards-pf container-pf-nav-pf-vertical nav-pf-persistent-secondary hidden-icons-pf">
 
   <div id="median-pr-latency-monthly"></div>
-
-<script>
-  var c3ChartDefaults = $().c3ChartDefaults();
-
-  var categories = [ "04/2016", "05/2016", "06/2016", "07/2016", "08/2016", "09/2016", "10/2016", "11/2016", "12/2016", "01/2017", "02/2017", "03/2017"];
-
-  var columnsData = [
-    ['data1', 4, 5, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3]
-  ];
-
-  var verticalBarChartConfig = $().c3ChartDefaults().getDefaultBarConfig(categories);
-  verticalBarChartConfig.bindto = '#median-pr-latency-monthly';
-  verticalBarChartConfig.axis = {
-    x: {
-      categories: categories,
-      type: 'category'
-    }
-  };
-  verticalBarChartConfig.data = {
-    type: 'bar',
-    columns: columnsData
-  };
-  var verticalBarChart = c3.generate(verticalBarChartConfig);
-</script>
+  <script>
+  var median_pr_latency = c3.generate({
+    data: {
+      x: 'Month',
+      url: 'static/median-pr-latency-monthy.csv',
+      type: 'bar'
+    },
+    axis: {
+      x:  {
+        type: 'category'
+      }
+    },
+    bindto: '#median-pr-latency-monthly'
+  });
+  </script>
 
 </div>
 
