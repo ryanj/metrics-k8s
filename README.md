@@ -1,6 +1,8 @@
 # metrics-k8s
 *A basic metrics project built with patternfly*
 
+[![Dependency Check](http://img.shields.io/david/ryanj/http-base.svg)](https://david-dm.org/ryanj/http-base)
+
 ## Local Development
 For local development environment, clone the repo and run:
 
