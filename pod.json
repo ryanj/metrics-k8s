@@ -1,0 +1,25 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "creationTimestamp": null,
+    "name": "metrics-k8s",
+    "labels": {
+      "run": "metrics-k8s"
+    }
+  },
+  "spec": {
+    "containers": [
+      {
+        "name": "metrics-k8s",
+        "image": "quay.io/ryanj/metrics-k8s",
+        "ports": [
+          {
+            "containerPort": 2015
+          }
+        ],
+        "resources": {}
+      }
+    ]
+  }
+}
