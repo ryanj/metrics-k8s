@@ -115,10 +115,10 @@
 -->
 
 <div class="col-sm-12 col-md-6 cols-nopad-right">
-  <h1>Median PR Latency</h1>
 </div>
 <div class="container-fluid container-cards-pf container-pf-nav-pf-vertical nav-pf-persistent-secondary hidden-icons-pf">
 
+  <h2>Median PR Latency</h2>
   <div id="median-pr-latency-monthly"></div>
   <script>
   var median_pr_latency = c3.generate({
@@ -136,6 +136,7 @@
   });
   </script>
 
+  <h2>New GitHub Forks (monthly)</h2>
   <div id="new-github-forks-monthly"></div>
   <script>
   var github_forks_monthly = c3.generate({
@@ -150,6 +151,24 @@
       }
     },
     bindto: '#new-github-forks-monthly'
+  });
+  </script>
+
+  <h2>New GitHub Stars (monthly)</h2>
+  <div id="new-github-stars-monthly"></div>
+  <script>
+  var github_stars_monthly = c3.generate({
+    data: {
+      x: 'Month',
+      url: 'static/gh-stars-monthly.csv',
+      type: 'bar'
+    },
+    axis: {
+      x:  {
+        type: 'category'
+      }
+    },
+    bindto: '#new-github-stars-monthly'
   });
   </script>
 
