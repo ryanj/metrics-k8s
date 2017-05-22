@@ -136,6 +136,23 @@
   });
   </script>
 
+  <div id="new-github-forks-monthly"></div>
+  <script>
+  var github_forks_monthly = c3.generate({
+    data: {
+      x: 'Month',
+      url: 'static/gh-forks-monthly.csv',
+      type: 'bar'
+    },
+    axis: {
+      x:  {
+        type: 'category'
+      }
+    },
+    bindto: '#new-github-forks-monthly'
+  });
+  </script>
+
 </div>
 
 <script>
