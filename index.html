@@ -172,6 +172,50 @@
   });
   </script>
 
+  <h2>Pony Leaderboard (PRs from previous year)</h2>
+  <div id="pony-leaderboard-last-year"></div>
+  <script>
+  var pony_leaderboard_last_year = c3.generate({
+    size: {
+      height: 1000
+    },
+    data: {
+      x: 'Pony',
+      url: 'static/ponies-last-year-May-2016-to-2017.csv',
+      type: 'bar'
+    },
+    axis: {
+      x:  {
+        type: 'category'
+      },
+      rotated: true
+    },
+    bindto: '#pony-leaderboard-last-year'
+  });
+  </script>
+
+  <h2>Period of involvement (2016)</h2>
+  <div id="period-of-involvement"></div>
+  <script>
+  var period_of_involvement_last_year = c3.generate({
+    size: {
+      height: 2200
+    },
+    data: {
+      x: 'Contributor',
+      url: 'static/period-of-involvement-in-days-2016-only.csv',
+      type: 'bar'
+    },
+    axis: {
+      x:  {
+        type: 'category'
+      },
+      rotated: true
+    },
+    bindto: '#period-of-involvement'
+  });
+  </script>
+
 </div>
 
 <script>
