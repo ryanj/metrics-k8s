@@ -1,3 +1,3 @@
 FROM joshix/caddy
-MAINTAINER ryanj <ryanj@coreos.com>
+MAINTAINER ryanj <ryanj@redhat.com>
 COPY . /var/www/html
