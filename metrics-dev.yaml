@@ -43,9 +43,9 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /var/www/html
-          name: src
+          name: metrics-src
       volumes:
-      - name: src
+      - name: metrics-src
         hostPath:
           path: /var/www/html
 status: {}
