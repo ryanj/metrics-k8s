@@ -4,12 +4,15 @@ metadata:
   creationTimestamp: null
   name: metrics-dev
 spec:
+  externalTrafficPolicy: Cluster
   ports:
   - port: 2015
     protocol: TCP
     targetPort: 2015
   selector:
     run: metrics-dev
+  sessionAffinity: None
+  type: NodePort
 status:
   loadBalancer: {}
 ---
@@ -24,25 +27,25 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      run: metrics-review
+      run: metrics-dev
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        run: metrics-review
+        run: metrics-dev
     spec:
       containers:
       - image: quay.io/ryanj/metrics-k8s
-        name: metrics-review
+        name: metrics-dev
         ports:
         - containerPort: 2015
         resources: {}
         volumeMounts:
         - mountPath: /var/www/html
-          name: metrics-src
+          name: src
       volumes:
-      - name: metrics-src
+      - name: src
         hostPath:
           path: /var/www/html
 status: {}
